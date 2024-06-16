@@ -34,6 +34,21 @@ const Portfolio = () => {
       id: 5,
       src: image,
       codeLink: "https://github.com/dilina-jayalath/Portfolio",
+    },    
+    {
+      id: 6,
+      src: image,
+      codeLink: "https://github.com/dilina-jayalath/Portfolio",
+    },    
+    {
+      id: 7,
+      src: image,
+      codeLink: "https://github.com/dilina-jayalath/Portfolio",
+    },    
+    {
+      id: 8,
+      src: image,
+      codeLink: "https://github.com/dilina-jayalath/Portfolio",
     }
 
   ];
