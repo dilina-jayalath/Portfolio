@@ -2,6 +2,10 @@ import React from "react";
 
 
 import landselling from "../assets/portfolio/landselling.png";
+import image from "../assets/portfolio/image.png";
+import stock from "../assets/portfolio/Stock.png";
+import rathiy from "../assets/portfolio/rathi.png";
+import brick from "../assets/portfolio/brick.png";
 
 
 const Portfolio = () => {
@@ -10,7 +14,28 @@ const Portfolio = () => {
       id: 1,
       src: landselling,
       codeLink: "https://github.com/dilina-jayalath/Land-Selling-WebApplication",
+    },    
+    {
+      id: 2,
+      src: stock,
+      codeLink: "https://github.com/dilina-jayalath/StockManagment-WebApplication",
+    },    
+    {
+      id: 3,
+      src: rathiy,
+      codeLink: "https://github.com/dilina-jayalath/Book_shop_ITP",
+    },    
+    {
+      id: 4,
+      src: brick,
+      codeLink: "https://github.com/dilina-jayalath/Land-Selling-WebApplication",
+    },    
+    {
+      id: 5,
+      src: image,
+      codeLink: "https://github.com/dilina-jayalath/Portfolio",
     }
+
   ];
 
   return (
