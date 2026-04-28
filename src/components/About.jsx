@@ -24,14 +24,14 @@ const About = () => {
     <section name="about" className="w-full py-24">
       <div className="mx-auto max-w-6xl px-4">
         <div className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr]">
-          <div className="rounded-[2rem] border border-white/70 bg-white/70 p-8 shadow-[0_20px_70px_rgba(15,23,42,0.07)] backdrop-blur">
-            <p className="text-sm font-semibold uppercase tracking-[0.35em] text-slate-500">
+          <div className="rounded-[2rem] border border-white/10 bg-[#0c1117]/75 p-8 shadow-[0_20px_70px_rgba(0,0,0,0.3)] backdrop-blur">
+            <p className="text-sm font-semibold uppercase tracking-[0.35em] text-slate-400">
               About
             </p>
-            <h2 className="font-display mt-4 text-4xl font-semibold text-slate-950 sm:text-5xl">
+            <h2 className="font-display mt-4 text-4xl font-semibold text-slate-50 sm:text-5xl">
               A portfolio that now reflects the way I actually build.
             </h2>
-            <div className="mt-6 space-y-5 text-base leading-8 text-slate-600 sm:text-lg">
+            <div className="mt-6 space-y-5 text-base leading-8 text-slate-300 sm:text-lg">
               <p>
                 I am a software engineering student with a strong interest in
                 building useful products, not just isolated assignments. My recent
@@ -57,17 +57,17 @@ const About = () => {
             {focusAreas.map(({ title, icon, text }) => (
               <div
                 key={title}
-                className="rounded-[2rem] border border-white/70 bg-white/70 p-6 shadow-[0_20px_60px_rgba(15,23,42,0.06)] backdrop-blur"
+                className="rounded-[2rem] border border-white/10 bg-[#0c1117]/75 p-6 shadow-[0_20px_60px_rgba(0,0,0,0.28)] backdrop-blur"
               >
                 <div className="flex items-center gap-3">
-                  <div className="rounded-2xl bg-slate-950 p-3 text-white">
+                  <div className="rounded-2xl bg-emerald-400 p-3 text-[#04130c]">
                     {icon}
                   </div>
-                  <h3 className="font-display text-2xl font-semibold text-slate-950">
+                  <h3 className="font-display text-2xl font-semibold text-slate-50">
                     {title}
                   </h3>
                 </div>
-                <p className="mt-4 text-sm leading-7 text-slate-600 sm:text-base">
+                <p className="mt-4 text-sm leading-7 text-slate-300 sm:text-base">
                   {text}
                 </p>
               </div>

@@ -59,13 +59,13 @@ const Experience = () => {
     <section name="experience" className="w-full py-24">
       <div className="mx-auto max-w-6xl px-4">
         <div className="max-w-3xl">
-          <p className="text-sm font-semibold uppercase tracking-[0.35em] text-slate-500">
+          <p className="text-sm font-semibold uppercase tracking-[0.35em] text-slate-400">
             Stack
           </p>
-          <h2 className="font-display mt-4 text-4xl font-semibold text-slate-950 sm:text-5xl">
+          <h2 className="font-display mt-4 text-4xl font-semibold text-slate-50 sm:text-5xl">
             The tools behind the projects.
           </h2>
-          <p className="mt-5 text-lg leading-8 text-slate-600">
+          <p className="mt-5 text-lg leading-8 text-slate-300">
             A mix of frontend UI work, backend implementation, database handling,
             and AI-adjacent tooling drawn from the projects featured above and the
             wider GitHub archive.
@@ -76,12 +76,12 @@ const Experience = () => {
           {skillGroups.map(({ title, description, items }) => (
             <div
               key={title}
-              className="rounded-[2rem] border border-white/70 bg-white/75 p-6 shadow-[0_24px_70px_rgba(15,23,42,0.06)] backdrop-blur"
+              className="rounded-[2rem] border border-white/10 bg-[#0c1117]/78 p-6 shadow-[0_24px_70px_rgba(0,0,0,0.28)] backdrop-blur"
             >
-              <h3 className="font-display text-2xl font-semibold text-slate-950">
+              <h3 className="font-display text-2xl font-semibold text-slate-50">
                 {title}
               </h3>
-              <p className="mt-3 text-sm leading-7 text-slate-600">
+              <p className="mt-3 text-sm leading-7 text-slate-300">
                 {description}
               </p>
 
@@ -89,10 +89,10 @@ const Experience = () => {
                 {items.map(({ id, src, title: itemTitle }) => (
                   <div
                     key={id}
-                    className="flex items-center gap-3 rounded-[1.25rem] bg-[#f8fafc] px-4 py-3 transition duration-200 hover:-translate-y-0.5 hover:shadow-md"
+                    className="flex items-center gap-3 rounded-[1.25rem] border border-white/8 bg-[#0a0f14] px-4 py-3 transition duration-200 hover:-translate-y-0.5 hover:shadow-[0_14px_35px_rgba(0,0,0,0.3)]"
                   >
                     <img src={src} alt={itemTitle} className="h-10 w-10 object-contain" />
-                    <p className="text-sm font-semibold text-slate-700">
+                    <p className="text-sm font-semibold text-slate-200">
                       {itemTitle}
                     </p>
                   </div>

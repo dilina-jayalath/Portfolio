@@ -7,12 +7,13 @@
 @layer base {
   html {
     font-family: 'Space Grotesk', sans-serif;
-    background-color: #f4efe8;
+    background-color: #05070b;
+    color-scheme: dark;
     scroll-behavior: smooth;
   }
 
   body {
-    @apply m-0 bg-transparent text-slate-900 antialiased;
+    @apply m-0 bg-transparent text-slate-100 antialiased;
   }
 
   * {
@@ -20,8 +21,8 @@
   }
 
   ::selection {
-    background: #0f172a;
-    color: #f8fafc;
+    background: #34d399;
+    color: #04130c;
   }
 }
 
