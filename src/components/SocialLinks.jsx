@@ -1,71 +1,52 @@
 import React from "react";
+import { BsFillPersonLinesFill } from "react-icons/bs";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
-import { BsFillPersonLinesFill } from "react-icons/bs";
+import resumeFile from "../assets/Dilina_Jayalath_Resume.pdf";
 
 const SocialLinks = () => {
   const links = [
     {
       id: 1,
-      child: (
-        <>
-          LinkedIn <FaLinkedin size={30} />
-        </>
-      ),
+      label: "LinkedIn",
+      icon: <FaLinkedin size={22} />,
       href: "https://linkedin.com/in/dilina-jayalath",
-      style: "rounded-tr-md",
     },
     {
       id: 2,
-      child: (
-        <>
-          GitHub <FaGithub size={30} />
-        </>
-      ),
+      label: "GitHub",
+      icon: <FaGithub size={22} />,
       href: "https://github.com/dilina-jayalath",
     },
     {
       id: 3,
-      child: (
-        <>
-          Mail <HiOutlineMail size={30} />
-        </>
-      ),
+      label: "Mail",
+      icon: <HiOutlineMail size={22} />,
       href: "mailto:dspjayalath@gmail.com",
     },
     {
       id: 4,
-      child: (
-        <>
-          Resume <BsFillPersonLinesFill size={30} />
-        </>
-      ),
-      href: "/assets/Dilina_Jayalath_Resume.pdf",
-      style: "rounded-br-md",
+      label: "Resume",
+      icon: <BsFillPersonLinesFill size={22} />,
+      href: resumeFile,
       download: true,
     },
   ];
 
   return (
-    <div className="lg:flex flex-col top-[35%] left-0 fixed">
-      <ul>
-        {links.map(({ id, child, href, style, download }) => (
-          <li
-            key={id}
-            className={
-              "flex justify-between items-center w-40 h-14 px-4 ml-[-100px] hover:ml-[-10px] hover:rounded-md duration-300 bg-gray-500" +
-              " " +
-              style
-            }
-          >
+    <div className="fixed bottom-6 right-6 z-40 hidden lg:block">
+      <ul className="flex flex-col gap-3">
+        {links.map(({ id, label, icon, href, download }) => (
+          <li key={id}>
             <a
               href={href}
-              className="flex items-center justify-between w-full text-white"
               download={download}
               target="_blank"
               rel="noreferrer"
+              aria-label={label}
+              className="flex h-12 w-12 items-center justify-center rounded-2xl border border-white/80 bg-white/85 text-slate-900 shadow-[0_16px_40px_rgba(15,23,42,0.12)] backdrop-blur transition duration-200 hover:-translate-y-1 hover:bg-slate-950 hover:text-white"
             >
-              {child}
+              {icon}
             </a>
           </li>
         ))}

@@ -1,107 +1,108 @@
 import React from "react";
-
-import html from "../assets/html.png";
 import css from "../assets/css.png";
-import javascript from "../assets/javascript.png";
-import reactImage from "../assets/react.png";
-import mongo from "../assets/mongo.png";
-import github from "../assets/github.png";
-import java from "../assets/java.png";
-import mysql from "../assets/mysql.png";
-import python from "../assets/python.png";
+import dialogflow from "../assets/dialogflow.png";
 import firebase from "../assets/firebase.png";
-
+import github from "../assets/github.png";
+import graphql from "../assets/graphql.png";
+import html from "../assets/html.png";
+import java from "../assets/java.png";
+import javascript from "../assets/javascript.png";
+import mongo from "../assets/mongo.png";
+import mysql from "../assets/mysql.png";
+import nextjs from "../assets/nextjs.png";
+import node from "../assets/node.png";
+import python from "../assets/python.png";
+import reactImage from "../assets/react.png";
+import tailwind from "../assets/tailwind.png";
 
 const Experience = () => {
-  const techs = [
+  const skillGroups = [
     {
-      id: 1,
-      src: html,
-      title: "HTML",
-      style: "shadow-orange-500",
+      title: "Frontend",
+      description:
+        "UI systems, responsive layouts, and component-based product work.",
+      items: [
+        { id: 1, src: reactImage, title: "React" },
+        { id: 2, src: javascript, title: "JavaScript" },
+        { id: 3, src: tailwind, title: "Tailwind" },
+        { id: 4, src: nextjs, title: "Next.js" },
+        { id: 5, src: html, title: "HTML" },
+        { id: 6, src: css, title: "CSS" },
+      ],
     },
     {
-      id: 2,
-      src: css,
-      title: "CSS",
-      style: "shadow-blue-500",
+      title: "Backend and Data",
+      description:
+        "Application logic, APIs, databases, and service integrations.",
+      items: [
+        { id: 7, src: node, title: "Node.js" },
+        { id: 8, src: java, title: "Java" },
+        { id: 9, src: python, title: "Python" },
+        { id: 10, src: mysql, title: "MySQL" },
+        { id: 11, src: mongo, title: "MongoDB" },
+        { id: 12, src: firebase, title: "Firebase" },
+      ],
     },
     {
-      id: 3,
-      src: javascript,
-      title: "JavaScript",
-      style: "shadow-yellow-500",
+      title: "Workflow and AI",
+      description:
+        "Version control, APIs, and tools that support experimentation.",
+      items: [
+        { id: 13, src: github, title: "GitHub" },
+        { id: 14, src: graphql, title: "GraphQL" },
+        { id: 15, src: dialogflow, title: "Dialogflow" },
+      ],
     },
-    {
-      id: 4,
-      src: reactImage,
-      title: "React",
-      style: "shadow-blue-600",
-    },
-    {
-      id: 5,
-      src: java,
-      title: "Java",
-      style: "shadow-white",
-    },
-    {
-      id: 6,
-      src: python,
-      title: "Python",
-      style: "shadow-yellow-400",
-    },
-    {
-      id: 7,
-      src: firebase,
-      title: "Firebase",
-      style: "shadow-yellow-500",
-    },
-    {
-      id: 8,
-      src: mysql,
-      title: "My SQL",
-      style: "shadow-yellow-500",
-    },
-    {
-      id: 9,
-      src: github,
-      title: "GitHub",
-      style: "shadow-gray-400",
-    },,
-    {
-      id: 10,
-      src: mongo,
-      title: "MongoDB",
-      style: "shadow-gray-400",
-    }
   ];
 
   return (
-    <div
-      name="experience"
-      className="w-full h-screen bg-gradient-to-b from-gray-800 to-black"
-    >
-      <div className="flex flex-col justify-center w-full h-full max-w-screen-lg p-4 mx-auto text-white">
-        <div>
-          <p className="inline p-2 text-4xl font-bold border-b-4 border-gray-500">
-            Experience
+    <section name="experience" className="w-full py-24">
+      <div className="mx-auto max-w-6xl px-4">
+        <div className="max-w-3xl">
+          <p className="text-sm font-semibold uppercase tracking-[0.35em] text-slate-500">
+            Stack
           </p>
-          <p className="py-6">These are the technologies I've worked with</p>
+          <h2 className="font-display mt-4 text-4xl font-semibold text-slate-950 sm:text-5xl">
+            The tools behind the projects.
+          </h2>
+          <p className="mt-5 text-lg leading-8 text-slate-600">
+            A mix of frontend UI work, backend implementation, database handling,
+            and AI-adjacent tooling drawn from the projects featured above and the
+            wider GitHub archive.
+          </p>
         </div>
 
-        <div className="grid w-full grid-cols-2 gap-8 px-12 py-8 text-center sm:grid-cols-3 sm:px-0">
-          {techs.map(({ id, src, title, style }) => (
+        <div className="mt-10 grid gap-6 xl:grid-cols-3">
+          {skillGroups.map(({ title, description, items }) => (
             <div
-              key={id}
-              className={`shadow-md hover:scale-105 duration-500 py-2 rounded-lg ${style}`}
+              key={title}
+              className="rounded-[2rem] border border-white/70 bg-white/75 p-6 shadow-[0_24px_70px_rgba(15,23,42,0.06)] backdrop-blur"
             >
-              <img src={src} alt="" className="w-20 mx-auto" />
-              <p className="mt-4">{title}</p>
+              <h3 className="font-display text-2xl font-semibold text-slate-950">
+                {title}
+              </h3>
+              <p className="mt-3 text-sm leading-7 text-slate-600">
+                {description}
+              </p>
+
+              <div className="mt-6 grid grid-cols-2 gap-3">
+                {items.map(({ id, src, title: itemTitle }) => (
+                  <div
+                    key={id}
+                    className="flex items-center gap-3 rounded-[1.25rem] bg-[#f8fafc] px-4 py-3 transition duration-200 hover:-translate-y-0.5 hover:shadow-md"
+                  >
+                    <img src={src} alt={itemTitle} className="h-10 w-10 object-contain" />
+                    <p className="text-sm font-semibold text-slate-700">
+                      {itemTitle}
+                    </p>
+                  </div>
+                ))}
+              </div>
             </div>
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

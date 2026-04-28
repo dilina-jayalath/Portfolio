@@ -3,7 +3,7 @@ module.exports = {
   theme: {
     extend: {},
     fontFamily: {
-      signature: ["Bebas Neue"],
+      signature: ["Syne", "sans-serif"],
     },
   },
   plugins: [],
