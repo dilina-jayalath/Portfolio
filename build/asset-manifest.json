@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.a0718d1c.css",
-    "main.js": "/Portfolio/static/js/main.af891ecb.js",
-    "static/media/Python_for_Beginners_E-Certificate.pdf": "/Portfolio/static/media/Python_for_Beginners_E-Certificate.3f70beb8b1522cb96d5d.pdf",
-    "static/media/me2.jpg": "/Portfolio/static/media/me2.31c067ea1b13152df4ff.jpg",
-    "static/media/Dilina_Jayalath_Resume.pdf": "/Portfolio/static/media/Dilina_Jayalath_Resume.f153a7aa1c6003818571.pdf",
-    "static/media/JKADSPJayalath-AITSDCybersecuri-certificate.pdf": "/Portfolio/static/media/JKADSPJayalath-AITSDCybersecuri-certificate.deb0186648d472d9c5fb.pdf",
-    "index.html": "/Portfolio/index.html",
-    "main.a0718d1c.css.map": "/Portfolio/static/css/main.a0718d1c.css.map",
-    "main.af891ecb.js.map": "/Portfolio/static/js/main.af891ecb.js.map"
+    "main.css": "./static/css/main.a0718d1c.css",
+    "main.js": "./static/js/main.32c87b26.js",
+    "static/media/Python_for_Beginners_E-Certificate.pdf": "./static/media/Python_for_Beginners_E-Certificate.3f70beb8b1522cb96d5d.pdf",
+    "static/media/me2.jpg": "./static/media/me2.31c067ea1b13152df4ff.jpg",
+    "static/media/Dilina_Jayalath_Resume.pdf": "./static/media/Dilina_Jayalath_Resume.f153a7aa1c6003818571.pdf",
+    "static/media/JKADSPJayalath-AITSDCybersecuri-certificate.pdf": "./static/media/JKADSPJayalath-AITSDCybersecuri-certificate.deb0186648d472d9c5fb.pdf",
+    "index.html": "./index.html",
+    "main.a0718d1c.css.map": "./static/css/main.a0718d1c.css.map",
+    "main.32c87b26.js.map": "./static/js/main.32c87b26.js.map"
   },
   "entrypoints": [
     "static/css/main.a0718d1c.css",
-    "static/js/main.af891ecb.js"
+    "static/js/main.32c87b26.js"
   ]
 }
