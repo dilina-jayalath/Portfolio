@@ -1,6 +1,6 @@
 import React from "react";
-import { FiFileText, FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
-import resumeFile from "../assets/Dilina_Jayalath_Resume.pdf";
+import { FiCheckCircle, FiGithub, FiLinkedin, FiMail, FiPrinter } from "react-icons/fi";
+import { submissionChecklist } from "../data/academicPortfolioData";
 
 const Contact = () => {
   const directLinks = [
@@ -25,96 +25,92 @@ const Contact = () => {
       href: "https://linkedin.com/in/dilina-jayalath",
       icon: <FiLinkedin size={18} />,
     },
-    {
-      id: 4,
-      title: "Resume",
-      value: "Download PDF",
-      href: resumeFile,
-      icon: <FiFileText size={18} />,
-      download: true,
-    },
   ];
 
   return (
-    <section name="contact" className="w-full px-4 pb-20 pt-24">
+    <section name="submission" className="page-section w-full px-4 pb-20 pt-24">
       <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[0.9fr_1.1fr]">
-        <div className="rounded-[2rem] border border-white/10 bg-[#0c1117]/78 p-8 shadow-[0_25px_80px_rgba(0,0,0,0.32)] backdrop-blur">
-          <p className="text-sm font-semibold uppercase tracking-[0.35em] text-slate-400">
-            Contact
+        <div className="portfolio-panel rounded-[2rem] p-8 backdrop-blur">
+          <p className="theme-eyebrow text-sm font-semibold uppercase tracking-[0.35em]">
+            PDF submission
           </p>
-          <h2 className="font-display mt-4 text-4xl font-semibold text-slate-50 sm:text-5xl">
-            Let&apos;s build something useful.
+          <h2 className="theme-heading font-display mt-4 text-4xl font-semibold sm:text-5xl">
+            Final export and submission guide
           </h2>
-          <p className="mt-5 text-base leading-8 text-slate-300 sm:text-lg">
-            If you want to talk about product ideas, software engineering work,
-            internships, or collaboration, use the form or reach me directly
-            through any of the links below.
+          <p className="theme-copy mt-5 text-base leading-8 sm:text-lg">
+            This page is designed so the browser print dialog can be used to
+            generate the final PDF. Before exporting, add the actual course
+            certificate file to the evidence panel so the portfolio fully matches
+            the marking rubric.
           </p>
 
           <div className="mt-8 space-y-4">
-            {directLinks.map(({ id, title, value, href, icon, download }) => (
-              <a
-                key={id}
-                href={href}
-                target={download ? "_self" : "_blank"}
-                rel="noreferrer"
-                download={download}
-                className="flex items-center gap-4 rounded-[1.5rem] border border-white/8 bg-[#0a0f14] px-5 py-4 transition duration-200 hover:-translate-y-0.5 hover:shadow-[0_14px_35px_rgba(0,0,0,0.3)]"
+            {submissionChecklist.map((item) => (
+              <div
+                key={item}
+                className="theme-link-card flex items-start gap-4 rounded-[1.5rem] px-5 py-4"
               >
-                <div className="rounded-2xl bg-emerald-400 p-3 text-[#04130c]">
-                  {icon}
+                <div className="theme-icon-accent rounded-2xl p-3">
+                  <FiCheckCircle size={18} />
                 </div>
-                <div>
-                  <p className="text-xs font-semibold uppercase tracking-[0.22em] text-slate-400">
-                    {title}
-                  </p>
-                  <p className="mt-1 text-sm font-medium text-slate-200 sm:text-base">
-                    {value}
-                  </p>
-                </div>
-              </a>
+                <p className="theme-copy text-sm leading-7 sm:text-base">
+                  {item}
+                </p>
+              </div>
             ))}
           </div>
+
+          <button
+            type="button"
+            onClick={() => window.print()}
+            className="theme-button-primary no-print mt-8 inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition duration-200"
+          >
+            Export portfolio as PDF
+            <FiPrinter size={18} />
+          </button>
         </div>
 
-        <div className="rounded-[2rem] border border-white/10 bg-[#0c1117]/78 p-6 shadow-[0_25px_80px_rgba(0,0,0,0.32)] backdrop-blur sm:p-8">
-          <form
-            action="https://getform.io/f/lbjkzlpa"
-            method="POST"
-            className="flex w-full flex-col"
-          >
-            <div className="mb-6">
-              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-400">
-                Send a message
-              </p>
-              <p className="mt-3 text-sm leading-7 text-slate-300 sm:text-base">
-                The form is still active. Drop your details and a short note
-                about what you want to discuss.
-              </p>
+        <div className="space-y-6">
+          <div className="theme-contrast-panel rounded-[2rem] p-8">
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-current">
+              Export tips
+            </p>
+            <div className="theme-contrast-copy mt-5 space-y-4 text-sm leading-7 sm:text-base">
+              <p>Choose Save as PDF in the print dialog.</p>
+              <p>Use portrait layout for a more traditional report style.</p>
+              <p>Keep margins at default or minimum depending on readability.</p>
+              <p>Enable background graphics if you want the full visual styling.</p>
             </div>
-            <input
-              type="text"
-              name="name"
-              placeholder="Enter your name"
-              className="rounded-2xl border border-white/10 bg-[#0a0f14] p-4 text-slate-100 outline-none transition duration-200 placeholder:text-slate-500 focus:border-emerald-400/60"
-            />
-            <input
-              type="text"
-              name="email"
-              placeholder="Enter your email"
-              className="my-4 rounded-2xl border border-white/10 bg-[#0a0f14] p-4 text-slate-100 outline-none transition duration-200 placeholder:text-slate-500 focus:border-emerald-400/60"
-            />
-            <textarea
-              name="message"
-              placeholder="Enter your message"
-              rows="10"
-              className="rounded-2xl border border-white/10 bg-[#0a0f14] p-4 text-slate-100 outline-none transition duration-200 placeholder:text-slate-500 focus:border-emerald-400/60"
-            />
+          </div>
 
-            <button className="mt-6 inline-flex items-center justify-center rounded-full bg-emerald-400 px-6 py-3 text-sm font-semibold text-[#04130c] transition duration-200 hover:-translate-y-0.5 hover:bg-emerald-300 sm:w-fit">
-              Let&apos;s talk
-            </button>
-          </form>
+          <div className="portfolio-panel rounded-[2rem] p-8">
+            <p className="theme-eyebrow text-sm font-semibold uppercase tracking-[0.35em]">
+              Professional links
+            </p>
+            <div className="mt-6 space-y-4">
+              {directLinks.map(({ id, title, value, href, icon }) => (
+                <a
+                  key={id}
+                  href={href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="theme-link-card flex items-center gap-4 rounded-[1.5rem] px-5 py-4 transition duration-200"
+                >
+                  <div className="theme-icon-warm rounded-2xl p-3">
+                    {icon}
+                  </div>
+                  <div>
+                    <p className="theme-eyebrow text-xs font-semibold uppercase tracking-[0.22em]">
+                      {title}
+                    </p>
+                    <p className="theme-heading mt-1 text-sm font-medium sm:text-base">
+                      {value}
+                    </p>
+                  </div>
+                </a>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>

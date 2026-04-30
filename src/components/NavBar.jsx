@@ -1,29 +1,32 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-import { FiGithub } from "react-icons/fi";
+import { FiDownload, FiMoon, FiSun } from "react-icons/fi";
 import { Link } from "react-scroll";
+import resumeFile from "../assets/Dilina_Jayalath_Resume.pdf";
 
-const NavBar = () => {
+const NavBar = ({ theme, toggleTheme }) => {
   const [nav, setNav] = useState(false);
 
   const links = [
     { id: 1, link: "home", label: "Home" },
-    { id: 2, link: "about", label: "About" },
-    { id: 3, link: "portfolio", label: "Projects" },
-    { id: 4, link: "experience", label: "Stack" },
-    { id: 5, link: "contact", label: "Contact" },
+    { id: 2, link: "about", label: "Introduction" },
+    { id: 3, link: "journal", label: "Journal" },
+    { id: 4, link: "career", label: "Plan" },
+    { id: 5, link: "cv", label: "CV" },
+    { id: 6, link: "course", label: "Course" },
+    { id: 7, link: "submission", label: "PDF" },
   ];
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 px-4 py-4">
-      <div className="mx-auto flex max-w-6xl items-center justify-between rounded-full border border-white/10 bg-[#0c1117]/80 px-5 py-3 text-slate-100 shadow-[0_20px_60px_rgba(0,0,0,0.35)] backdrop-blur-xl">
+    <header className="no-print fixed inset-x-0 top-0 z-50 px-4 py-4">
+      <div className="theme-nav-shell mx-auto flex max-w-6xl items-center justify-between rounded-full px-5 py-3 backdrop-blur-xl">
         <div>
           <Link to="home" smooth duration={500} className="cursor-pointer">
-            <p className="font-signature text-2xl font-bold tracking-tight text-slate-50 md:text-3xl">
+            <p className="theme-heading font-display text-2xl font-bold tracking-tight md:text-3xl">
               Dilina Jayalath
             </p>
-            <p className="text-xs uppercase tracking-[0.35em] text-slate-400">
-              Software Portfolio
+            <p className="theme-eyebrow text-xs uppercase tracking-[0.35em]">
+              PPW Portfolio
             </p>
           </Link>
         </div>
@@ -32,7 +35,7 @@ const NavBar = () => {
           {links.map(({ id, link, label }) => (
             <li
               key={id}
-              className="rounded-full px-4 py-2 text-sm font-medium text-slate-300 transition duration-200 hover:bg-white/10 hover:text-white"
+              className="theme-nav-link rounded-full px-4 py-2 text-sm font-medium transition duration-200"
             >
               <Link
                 to={link}
@@ -47,22 +50,52 @@ const NavBar = () => {
           ))}
         </ul>
 
-        <div className="hidden md:block">
-          <a
-            href="https://github.com/dilina-jayalath"
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-400 px-4 py-2 text-sm font-semibold text-[#04130c] transition duration-200 hover:-translate-y-0.5 hover:bg-emerald-300"
+        <div className="flex items-center gap-2">
+          <button
+            type="button"
+            onClick={toggleTheme}
+            role="switch"
+            aria-checked={theme === "dark"}
+            aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
+            className="theme-toggle relative inline-flex h-11 w-[5.25rem] items-center rounded-full px-2 transition duration-200"
           >
-            GitHub
-            <FiGithub size={16} />
-          </a>
+            <FiSun
+              size={16}
+              className={`theme-toggle-icon z-10 ${
+                theme === "light" ? "theme-toggle-icon-active opacity-100" : "opacity-45"
+              }`}
+            />
+            <FiMoon
+              size={16}
+              className={`theme-toggle-icon z-10 ml-auto ${
+                theme === "dark" ? "theme-toggle-icon-active opacity-100" : "opacity-45"
+              }`}
+            />
+            <span
+              className={`theme-toggle-thumb absolute left-1 top-1 flex h-9 w-9 items-center justify-center rounded-full transition duration-300 ${
+                theme === "dark" ? "translate-x-10" : "translate-x-0"
+              }`}
+            >
+              {theme === "dark" ? <FiMoon size={15} /> : <FiSun size={15} />}
+            </span>
+          </button>
+
+          <div className="hidden md:block">
+            <a
+              href={resumeFile}
+              download
+              className="theme-button-primary inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold transition duration-200"
+            >
+              Download CV
+              <FiDownload size={16} />
+            </a>
+          </div>
         </div>
 
         <button
           type="button"
           onClick={() => setNav(!nav)}
-          className="z-10 rounded-full border border-white/10 bg-white/5 p-3 text-slate-200 md:hidden"
+          className="theme-icon-button z-10 rounded-full p-3 md:hidden"
           aria-label="Toggle navigation"
         >
           {nav ? <FaTimes size={18} /> : <FaBars size={18} />}
@@ -70,7 +103,7 @@ const NavBar = () => {
       </div>
 
       {nav && (
-        <div className="mx-auto mt-3 max-w-6xl rounded-[2rem] border border-white/10 bg-[#0c1117]/95 p-6 shadow-[0_24px_80px_rgba(0,0,0,0.45)] md:hidden">
+        <div className="theme-mobile-shell mx-auto mt-3 max-w-6xl rounded-[2rem] p-6 md:hidden">
           <ul className="space-y-2">
             {links.map(({ id, link, label }) => (
               <li key={id}>
@@ -80,13 +113,22 @@ const NavBar = () => {
                   smooth
                   duration={500}
                   offset={-80}
-                  className="block cursor-pointer rounded-2xl bg-white/5 px-4 py-3 text-lg font-medium text-slate-200 transition duration-200 hover:bg-emerald-400 hover:text-[#04130c]"
+                  className="theme-mobile-link block cursor-pointer rounded-2xl px-4 py-3 text-lg font-medium transition duration-200"
                 >
                   {label}
                 </Link>
               </li>
             ))}
           </ul>
+
+          <a
+            href={resumeFile}
+            download
+            className="theme-button-primary mt-4 inline-flex items-center gap-2 rounded-full px-5 py-3 text-sm font-semibold transition duration-200"
+          >
+            Download CV
+            <FiDownload size={16} />
+          </a>
         </div>
       )}
     </header>

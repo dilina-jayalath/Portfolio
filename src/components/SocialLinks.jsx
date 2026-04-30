@@ -34,7 +34,7 @@ const SocialLinks = () => {
   ];
 
   return (
-    <div className="fixed bottom-6 right-6 z-40 hidden lg:block">
+    <div className="no-print fixed bottom-6 right-6 z-40 hidden lg:block">
       <ul className="flex flex-col gap-3">
         {links.map(({ id, label, icon, href, download }) => (
           <li key={id}>
@@ -44,7 +44,7 @@ const SocialLinks = () => {
               target="_blank"
               rel="noreferrer"
               aria-label={label}
-              className="flex h-12 w-12 items-center justify-center rounded-2xl border border-white/10 bg-[#0c1117]/90 text-slate-100 shadow-[0_16px_40px_rgba(0,0,0,0.3)] backdrop-blur transition duration-200 hover:-translate-y-1 hover:bg-emerald-400 hover:text-[#04130c]"
+              className="theme-social-button flex h-12 w-12 items-center justify-center rounded-2xl backdrop-blur transition duration-200"
             >
               {icon}
             </a>

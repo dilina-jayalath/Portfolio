@@ -4,20 +4,28 @@
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#05070b" />
+    <meta name="theme-color" content="#071018" />
     <meta
       name="description"
-      content="Web site created using create-react-app"
+      content="Dilina Jayalath academic and career portfolio for IT4070 - Preparing for Professional World."
     />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-   
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-
-    <title>Dilina Jayalath</title>
+    <script>
+      (function () {
+        var theme = localStorage.getItem("portfolio-theme") || "dark";
+        document.documentElement.dataset.theme = theme;
+        document.documentElement.style.colorScheme = theme;
+        var themeMeta = document.querySelector('meta[name="theme-color"]');
+        if (themeMeta) {
+          themeMeta.setAttribute("content", theme === "dark" ? "#071018" : "#f4efe6");
+        }
+      })();
+    </script>
+    <title>Dilina Jayalath | PPW Portfolio</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-  
   </body>
 </html>
