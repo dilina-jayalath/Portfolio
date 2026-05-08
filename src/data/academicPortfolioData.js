@@ -205,13 +205,13 @@ export const certificateGuidance = {
   reason:
     "This course strengthened my Python fundamentals and supported my progress in problem solving, scripting, and implementation work. It is relevant to my portfolio because I have continued to apply Python in academic and personal projects, including AI-oriented applications and backend-focused development tasks.",
   checklist: [
-    "The actual certificate PDF is now embedded in this section of the portfolio.",
-    "Show the course title, training provider, and completion date clearly.",
-    "Explain how the course improved a technical skill and how it connects to later project work.",
-    "Use the verification details if the lecturer needs to validate the certificate.",
+    "Each certificate is displayed as a separate evidence card in the portfolio.",
+    "The course title, training provider, academy, learner, location, and completion date are shown clearly.",
+    "Each certificate explains the skill area it supports and how it connects to later professional growth.",
+    "The original certificate PDFs remain available through open and download links.",
   ],
   note:
-    "This evidence item has been updated to the Python certificate and embedded directly in the portfolio with its issue date and verification details.",
+    "This evidence section now shows all available certificates with themed cards and direct links to the original PDF files.",
 };
 
 export const additionalCertificate = {
