@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "./static/css/main.0aa75211.css",
-    "main.js": "./static/js/main.93c8f996.js",
+    "main.css": "./static/css/main.768b434b.css",
+    "main.js": "./static/js/main.e8e42b6f.js",
     "static/media/Python_for_Beginners_E-Certificate.pdf": "./static/media/Python_for_Beginners_E-Certificate.3f70beb8b1522cb96d5d.pdf",
     "static/media/me2.jpg": "./static/media/me2.31c067ea1b13152df4ff.jpg",
     "static/media/Dilina_Jayalath_Resume.pdf": "./static/media/Dilina_Jayalath_Resume.f153a7aa1c6003818571.pdf",
@@ -9,11 +9,11 @@
     "static/media/introduction-to-cybersecurity.png": "./static/media/introduction-to-cybersecurity.ce2a4e21ca76a2fe0c21.png",
     "static/media/JKADSPJayalath-AITSDCybersecuri-certificate.pdf": "./static/media/JKADSPJayalath-AITSDCybersecuri-certificate.deb0186648d472d9c5fb.pdf",
     "index.html": "./index.html",
-    "main.0aa75211.css.map": "./static/css/main.0aa75211.css.map",
-    "main.93c8f996.js.map": "./static/js/main.93c8f996.js.map"
+    "main.768b434b.css.map": "./static/css/main.768b434b.css.map",
+    "main.e8e42b6f.js.map": "./static/js/main.e8e42b6f.js.map"
   },
   "entrypoints": [
-    "static/css/main.0aa75211.css",
-    "static/js/main.93c8f996.js"
+    "static/css/main.768b434b.css",
+    "static/js/main.e8e42b6f.js"
   ]
 }
