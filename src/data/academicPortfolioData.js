@@ -194,6 +194,42 @@ export const cvSections = {
   ],
 };
 
+export const certificateEvidence = [
+  {
+    title: "Python for Beginners",
+    provider: "Open Learning Platform, University of Moratuwa",
+    date: "26 August 2022",
+    focus: "Python fundamentals, problem solving, scripting, and implementation practice.",
+    value:
+      "Supports my academic and portfolio work by strengthening the programming base I use for automation, backend logic, and AI-oriented experiments.",
+  },
+  {
+    title: "Cybersecurity Essentials",
+    provider: "Cisco Networking Academy",
+    date: "26 March 2022",
+    focus:
+      "Core security awareness, threat concepts, confidentiality, integrity, availability, and defensive thinking.",
+    value:
+      "Complements my software engineering work by reminding me to consider risk, data handling, and secure practices while building applications.",
+  },
+  {
+    title: "Introduction to Cybersecurity",
+    provider: "Cisco Networking Academy",
+    date: "2022",
+    focus:
+      "Introductory cybersecurity concepts, online safety, common attack types, and digital responsibility.",
+    value:
+      "Shows early self-learning beyond programming and connects to my goal of becoming a dependable full-stack engineer.",
+  },
+];
+
+export const profileSummaryHighlights = [
+  "BSc (Hons) IT undergraduate specializing in Software Engineering at SLIIT.",
+  "Completed a one-year Software Engineering internship at Irusri Group.",
+  "Builds practical projects across React, TypeScript, JavaScript, Java, Python, Kotlin, SQL, and MongoDB.",
+  "Public GitHub portfolio includes marketplace, AI search, document AI, robotics, mobile, and management system work.",
+];
+
 export const certificateGuidance = {
   suggestedCourse: "Python for Beginners",
   provider: "Open Learning Platform, University of Moratuwa",

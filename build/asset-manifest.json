@@ -1,19 +1,21 @@
 {
   "files": {
-    "main.css": "./static/css/main.768b434b.css",
-    "main.js": "./static/js/main.e8e42b6f.js",
+    "main.css": "./static/css/main.115e9051.css",
+    "main.js": "./static/js/main.765c6b90.js",
     "static/media/Python_for_Beginners_E-Certificate.pdf": "./static/media/Python_for_Beginners_E-Certificate.3f70beb8b1522cb96d5d.pdf",
+    "static/media/Screenshot 2026-05-09 020845.png": "./static/media/Screenshot 2026-05-09 020845.cdebf8618294cc0201db.png",
     "static/media/me2.jpg": "./static/media/me2.31c067ea1b13152df4ff.jpg",
     "static/media/Dilina_Jayalath_Resume.pdf": "./static/media/Dilina_Jayalath_Resume.f153a7aa1c6003818571.pdf",
     "static/media/JKADSPJayalath-AITSDIntro Cyber-certificate.pdf": "./static/media/JKADSPJayalath-AITSDIntro Cyber-certificate.91240f84839a1924fc13.pdf",
     "static/media/introduction-to-cybersecurity.png": "./static/media/introduction-to-cybersecurity.ce2a4e21ca76a2fe0c21.png",
     "static/media/JKADSPJayalath-AITSDCybersecuri-certificate.pdf": "./static/media/JKADSPJayalath-AITSDCybersecuri-certificate.deb0186648d472d9c5fb.pdf",
+    "static/media/portfolio-qr.svg": "./static/media/portfolio-qr.8c11efef6c9a9753bba733783fd79419.svg",
     "index.html": "./index.html",
-    "main.768b434b.css.map": "./static/css/main.768b434b.css.map",
-    "main.e8e42b6f.js.map": "./static/js/main.e8e42b6f.js.map"
+    "main.115e9051.css.map": "./static/css/main.115e9051.css.map",
+    "main.765c6b90.js.map": "./static/js/main.765c6b90.js.map"
   },
   "entrypoints": [
-    "static/css/main.768b434b.css",
-    "static/js/main.e8e42b6f.js"
+    "static/css/main.115e9051.css",
+    "static/js/main.765c6b90.js"
   ]
 }

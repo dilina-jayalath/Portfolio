@@ -11,6 +11,7 @@ import introCyberBadge from "../data/introduction-to-cybersecurity.png";
 import introCyberPdf from "../data/JKADSPJayalath-AITSDIntro Cyber-certificate.pdf";
 import pythonCertificatePdf from "../data/Python_for_Beginners_E-Certificate.pdf";
 import cyberEssentialsPdf from "../data/JKADSPJayalath-AITSDCybersecuri-certificate.pdf";
+import { certificateEvidence } from "../data/academicPortfolioData";
 
 const certificateItems = [
   {
@@ -32,7 +33,10 @@ const certificateItems = [
     icon: FiAward,
     tone: "accent",
   },
-];
+].map((certificate) => ({
+  ...certificate,
+  details: certificateEvidence.find((item) => item.title === certificate.title),
+}));
 
 const CertificatePreview = ({ certificate }) => {
   if (certificate.image) {
@@ -48,20 +52,18 @@ const CertificatePreview = ({ certificate }) => {
   }
 
   return (
-    <div className="theme-placeholder-canvas aspect-[1.414/1] overflow-hidden rounded-[1.5rem]">
-      <object
-        data={`${certificate.pdf}#page=1&toolbar=0&navpanes=0&scrollbar=0`}
-        type="application/pdf"
-        className="h-full w-full"
-        aria-label={`${certificate.title} certificate preview`}
-      >
-        <div className="flex h-full flex-col items-center justify-center px-6 text-center">
-          <FiFileText className="theme-accent-text" size={42} />
-          <p className="theme-copy mt-4 text-sm leading-7">
-            Certificate preview is available through the PDF link below.
-          </p>
-        </div>
-      </object>
+    <div className="theme-placeholder-canvas flex aspect-[1.414/1] flex-col justify-center rounded-[1.5rem] p-6">
+      <FiFileText className="theme-accent-text" size={38} />
+      <p className="theme-eyebrow mt-5 text-xs font-semibold uppercase tracking-[0.24em]">
+        {certificate.details?.provider || "Certificate evidence"}
+      </p>
+      <p className="theme-heading mt-3 text-xl font-semibold">
+        {certificate.title}
+      </p>
+      <p className="theme-copy mt-3 text-sm leading-6">
+        {certificate.details?.focus ||
+          "Certificate preview is available through the PDF link below."}
+      </p>
     </div>
   );
 };
@@ -88,12 +90,23 @@ const CertificateCard = ({ certificate }) => {
           <h3 className="theme-heading font-display mt-3 text-2xl font-semibold">
             {certificate.title}
           </h3>
+          {certificate.details?.date && (
+            <p className="theme-copy-soft mt-2 text-sm">
+              Completed: {certificate.details.date}
+            </p>
+          )}
         </div>
       </div>
 
       <div className="mt-6">
         <CertificatePreview certificate={certificate} />
       </div>
+
+      {certificate.details?.value && (
+        <p className="theme-copy mt-5 text-sm leading-7">
+          {certificate.details.value}
+        </p>
+      )}
 
       <div className="mt-auto flex flex-wrap gap-3 pt-6">
         <a
